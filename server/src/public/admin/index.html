@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جايـكم - لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">جـايـكـم</div>
+        <span class="logo-sub">لوحة التحكم</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" data-page="dashboard" class="nav-item active">
+          <span class="nav-icon">📊</span> الرئيسية
+        </a>
+        <a href="#" data-page="restaurants" class="nav-item">
+          <span class="nav-icon">🏪</span> المطاعم
+        </a>
+        <a href="#" data-page="captains" class="nav-item">
+          <span class="nav-icon">🛵</span> الكباتن
+        </a>
+        <a href="#" data-page="users" class="nav-item">
+          <span class="nav-icon">👤</span> المستخدمين
+        </a>
+        <a href="#" data-page="delivery-rules" class="nav-item">
+          <span class="nav-icon">📏</span> قواعد التوصيل
+        </a>
+        <a href="#" data-page="orders" class="nav-item">
+          <span class="nav-icon">📋</span> الطلبات
+        </a>
+        <a href="#" data-page="logs" class="nav-item">
+          <span class="nav-icon">📜</span> سجل الحركات
+        </a>
+        <a href="#" data-page="pending-restaurants" class="nav-item">
+          <span class="nav-icon">🏪</span> طلبات مطاعم
+        </a>
+        <a href="#" data-page="pending-captains" class="nav-item">
+          <span class="nav-icon">🛵</span> طلبات كباتن
+        </a>
+        <a href="#" data-page="support-numbers" class="nav-item">
+          <span class="nav-icon">📞</span> الدعم الفني
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="logout-btn" onclick="logout()">تسجيل خروج</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <div class="topbar-title" id="pageTitle">الرئيسية</div>
+        <div class="topbar-info">
+          <span id="adminName">الأدمن</span>
+          <div class="online-dot"></div>
+        </div>
+      </header>
+      <div class="content" id="pageContent"></div>
+    </main>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">جـايـكـم</div>
+      <div class="login-sub">لوحة التحكم</div>
+      <div class="login-error" id="loginError"></div>
+      <input type="text" id="loginPhone" class="login-input" placeholder="رقم الهاتف" dir="ltr">
+      <input type="password" id="loginPassword" class="login-input" placeholder="كلمة السر">
+      <button class="login-btn" onclick="login()">دخول</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
